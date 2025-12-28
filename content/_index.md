@@ -12,7 +12,7 @@ SongPro is a text file format for making chord & lyric lead sheets for songs.
 
 Here's a partial example of a song in the SongPro format:
 
-```
+{{< songpro >}}
 @title=Escape Capsule
 @artist=Brian Kelly
 !bandcamp=https://spilth.bandcamp.com/track/escape-capsule
@@ -34,7 +34,9 @@ You're [G]safe with me, un-[A]til you leave
 | [Em] | [D] | [Em] | [D] |
 | [Em] | [D] | [Em] | [F#] |
 | [B] | [B] | [Bm] | [Bm] |
-```
+{{< /songpro >}}
+
+---
 
 ## SongPro Format
 

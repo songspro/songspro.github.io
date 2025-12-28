@@ -87,11 +87,72 @@
             color: #555;
             margin-bottom: 2rem;
         }
+        
+        /* SongPro specific styles */
+        .songpro-example {
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 1.5rem;
+            margin: 2rem 0;
+        }
+        .songpro-meta {
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 1rem;
+            margin-bottom: 1.5rem;
+        }
+        .songpro-title {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #2c3e50;
+        }
+        .songpro-artist {
+            font-size: 1.2rem;
+            color: #555;
+            font-style: italic;
+        }
+        .songpro-section {
+            margin: 1.5rem 0;
+        }
+        .songpro-section-title {
+            font-weight: bold;
+            color: #3498db;
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+        }
+        .songpro-line {
+            margin: 0.5rem 0;
+            font-family: "Monaco", "Courier New", monospace;
+            line-height: 1.8;
+        }
+        .chord {
+            color: #e74c3c;
+            font-weight: bold;
+            font-size: 0.95em;
+        }
+        .songpro-measures {
+            font-family: "Monaco", "Courier New", monospace;
+            color: #3498db;
+            font-weight: bold;
+            padding: 0.5rem 0;
+        }
+        .songpro-comment {
+            font-style: italic;
+            color: #7f8c8d;
+            padding: 0.3rem 0;
+        }
+        .songpro-tablature {
+            font-family: "Monaco", "Courier New", monospace;
+            color: #16a085;
+            font-weight: bold;
+        }
     </style>
 </head>
 <body>
     <main>
-        {{ .Content }}
+        {{ block "main" . }}
+            {{ .Content }}
+        {{ end }}
     </main>
 </body>
 </html>
