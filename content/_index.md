@@ -135,3 +135,5 @@ You can include comments throughout the song by prefixing them with `> `. These 
 
 - [Chord Diagrams Ruby Gem](https://github.com/spilth/chord_diagrams) - Provides chord diagrams as SVGs
 - [Zpevnikator.git](https://zpevnikator.github.io/) - Offline song database browser (many songs in SongPro format)
+- [SongPro VS Code plugin](https://github.com/songspro/songpro) - SongPro plugin for VS Code - syntax highlighting, transposition, convert to Nashville Number System, and more
+
