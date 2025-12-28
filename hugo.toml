@@ -1,0 +1,11 @@
+baseURL = 'https://zpevnikator.github.io/songpro.github.io/'
+languageCode = 'en-us'
+title = 'SongPro'
+
+[params]
+  description = 'SongPro is a text file format for making chord & lyric lead sheets for songs.'
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
