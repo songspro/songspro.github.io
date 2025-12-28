@@ -1,4 +1,4 @@
-baseURL = 'https://zpevnikator.github.io/songpro.github.io/'
+baseURL = '/'
 languageCode = 'en-us'
 title = 'SongPro'
 
