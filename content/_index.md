@@ -64,7 +64,7 @@ The values are text that are displayed in the rendered output.
 
 ### Custom Attributes
 
-Custom attributes can be added the format:
+Custom attributes can be added with the format:
 
 ```
 !custom_attribute=value
