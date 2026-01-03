@@ -176,5 +176,5 @@ If you want to make a transposition, use notation `[+3b]` for trasposing rest of
 
 - [Chord Diagrams Ruby Gem](https://github.com/spilth/chord_diagrams) - Provides chord diagrams as SVGs
 - [Zpevnikator.git](https://zpevnikator.github.io/) - Offline song database browser (many songs in SongPro format)
-- [SongPro VS Code plugin](https://github.com/songspro/songpro) - SongPro plugin for VS Code - syntax highlighting, transposition, convert to Nashville Number System, and more
+- [SongPro VS Code plugin](https://marketplace.visualstudio.com/items?itemName=janproch.songpro) - SongPro plugin for VS Code - syntax highlighting, transposition, convert to Nashville Number System, and more. [Source code](https://github.com/songspro/songpro) available
 
