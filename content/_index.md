@@ -123,6 +123,47 @@ You can include comments throughout the song by prefixing them with `> `. These 
 > Whistle the verse melody over these chords
 ```
 
+### More songs in one file (Zpevnikator extension)
+You could store more songs in one songpro file. Just use "---" delimiter on single line
+
+{{< songpro >}}
+@title=Song1
+
+# 1.
+Text1
+
+---
+
+@title=Song2
+
+# 1.
+Text2
+{{< /songpro >}}
+
+
+### Nasville Number System (Zpevnikator extension)
+[Nashville number system](https://en.wikipedia.org/wiki/Nashville_Number_System) uses numbers for chords.
+
+In C scale, there are these chords:
+
+| Number | Chord |
+|--------|-------|
+| 1      | C     |
+| 1#     | C#    |
+| 2      | D     |
+| 3b     | D#    |
+| 3      | E     |
+| 4      | F     |
+| 4#     | F#    |
+| 5      | G     |
+| 5#     | G#    |
+| 6      | A     |
+| 7b     | Bb    |
+| 7      | B     |
+
+If you want to make a transposition, use notation `[+3b]` for trasposing rest of the song
+
+
 ## SongPro Libraries
 
 - [SongPro Crystal](https://github.com/SongProOrg/songpro-crystal) 

@@ -1,45 +1,15 @@
 {{- $content := .Inner -}}
-{{- $lines := split $content "\n" -}}
-{{- $title := "" -}}
-{{- $artist := "" -}}
-{{- $inSection := false -}}
-{{- $sectionName := "" -}}
+{{- $lines := split (trim $content " \n") "\n" -}}
 
 <div class="songpro-example">
-    <div class="songpro-meta">
-        {{- range $lines -}}
-            {{- if hasPrefix . "@title=" -}}
-                {{- $title = strings.TrimPrefix "@title=" . -}}
-                <div class="songpro-title">{{ $title }}</div>
-            {{- else if hasPrefix . "@artist=" -}}
-                {{- $artist = strings.TrimPrefix "@artist=" . -}}
-                <div class="songpro-artist">{{ $artist }}</div>
-            {{- end -}}
-        {{- end -}}
-    </div>
-    
     {{- range $lines -}}
         {{- $line := . -}}
-        {{- if and (ne $line "") (not (hasPrefix $line "@")) (not (hasPrefix $line "!")) -}}
-            {{- if hasPrefix $line "# " -}}
-                {{- if $inSection -}}
-                    </div>
-                {{- end -}}
-                {{- $sectionName = strings.TrimPrefix "# " $line -}}
-                <div class="songpro-section">
-                    <div class="songpro-section-title">{{ $sectionName }}</div>
-            {{- else if hasPrefix $line "|-" -}}
-                    <div class="songpro-tablature">{{ $line }}</div>
-            {{- else if hasPrefix $line "| [" -}}
-                    <div class="songpro-measures">{{ $line }}</div>
-            {{- else if hasPrefix $line "> " -}}
-                    <div class="songpro-comment">{{ strings.TrimPrefix "> " $line }}</div>
-            {{- else -}}
-                    <div class="songpro-line">{{ $line | replaceRE "\\[([^]]+)\\]" "<span class=\"chord\">[$1]</span>" | safeHTML }}</div>
-            {{- end -}}
+        {{- if or  (hasPrefix $line "@") (hasPrefix $line "!") -}}
+            <div class="songpro-attribute">{{ $line }}</div>
+        {{- else if hasPrefix $line "# " -}}
+            <div class="songpro-special">{{ $line }}</div>
+        {{- else -}}
+                <div class="songpro-line">{{ $line | replaceRE "\\[([^]]+)\\]" "<span class=\"songpro-chord\">[$1]</span>" | safeHTML }}&nbsp;</div>
         {{- end -}}
-    {{- end -}}
-    {{- if $inSection -}}
-        </div>
     {{- end -}}
 </div>
